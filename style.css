@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+:root{
+    --gradient1 : linear-gradient(rgb(0, 153, 255),rgb(10, 73, 121));
+    --trasparent : rgba(255,255,255,0.1);
+    --branco : white;
+    --azul :rgb(0, 153, 255);
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: var(--gradient1);
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    backdrop-filter: blur(33px);
+    background-color: var(--trasparent);
+    padding: 50px 90px;
+    color: var(--branco);
+    width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div img{
+    height: 170px;
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#btns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.controllers{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conts{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 10px;
+    width: 250px;
+    background-color: var(--branco);
+    border-radius: 5px;
+}
+.barra{
+    position: absolute;
+    background-color: var(--azul);
+    width: 0%;
+    height: 100%;
+}
+button img{
+    height: 30px;
+}
