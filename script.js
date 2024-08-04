@@ -5,17 +5,17 @@
             
             {
                 title : "Long Life Notti",
-                scr : "./music/long_live_notti_mp3_36429.mp3",
+                scr : "long_live_notti_mp3_36429.mp3",
                 artist : "Notti OSama X DD OSama X Sugarhill Ddot"
             },
             {
                 title : "E4N",
-                scr : "./music/dd_osama_x_jstar_balla_x_edot_baby_x_sugarhill_ddot_x_dudeylo_x_roscoe_g_e4n_official_video_mp3_36928.mp3",
+                scr : "dd_osama_x_jstar_balla_x_edot_baby_x_sugarhill_ddot_x_dudeylo_x_roscoe_g_e4n_official_video_mp3_36928.mp3",
                 artist : "dd_x_jstar_balla_x_edot_baby_x_sugarhill_ddot_x_dudeylo_x_roscoe_g"
             },
             {
                 title : "BACK TO BACK",
-                scr : "./music/DD Osama X Dudeylo - BACK TO BACK (Shot by CAINE FRAME) (Prod by chrissaves) (Official Video).mp3",
+                scr : "DD Osama X Dudeylo - BACK TO BACK (Shot by CAINE FRAME) (Prod by chrissaves) (Official Video).mp3",
                 artist : "DD Osama X Dudeylo"
             }
         ]
@@ -37,6 +37,7 @@
         audio.src = listaMusic[index].scr
         titulo.textContent = listaMusic[index].title
         artista.textContent = listaMusic[index].artist
+        document.getElementById("IMGPLay").src = "pause.png"
         audio.play()
         
     }
@@ -80,9 +81,11 @@
     })
     PausePlayBTn.addEventListener("click",(e)=>{
         if(audio.paused){
+            document.getElementById("IMGPLay").src = "pause.png"
             audio.play()
             return
         }else{
+            document.getElementById("IMGPLay").src = "icons8-play-48.png"
             audio.pause()
             return
         }
